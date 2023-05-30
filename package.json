@@ -1,0 +1,26 @@
+{
+  "name": "nodejs",
+  "version": "1.0.0",
+  "description": "node js project",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/trayana-hansen/nodejs.git"
+  },
+  "keywords": [
+    "node"
+  ],
+  "author": "trayana",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/trayana-hansen/nodejs/issues"
+  },
+  "homepage": "https://github.com/trayana-hansen/nodejs#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
