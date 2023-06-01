@@ -4,6 +4,8 @@ import { productRouter } from "./Routes/products.router.js";
 import dotenv from "dotenv";
 
 const app = express();
+app.use(express.urlencoded({ extended: true }));
+
 dotenv.config();
 
 const port = process.env.PORT;

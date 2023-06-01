@@ -2,19 +2,21 @@ import express from "express";
 
 const postRouter = express.Router();
 
-postRouter.get("/posts", (res, req) => {
+postRouter.get("/posts", (req, res) => {
   res.send("Get all posts");
 });
 
-postRouter.post("/posts", (res, req) => {
-  res.send("Make a new post");
+postRouter.post("/posts", (req, res) => {
+  res.send(
+    `${req.body.firstname} ${req.body.lastname} ${req.body.email} ${req.body.birthday} ${req.body.password} ${req.body.position} ${req.body.address}`
+  );
 });
 
-postRouter.put("/posts", (res, req) => {
+postRouter.put("/posts", (req, res) => {
   res.send("Update a post");
 });
 
-postRouter.delete("/posts", (res, req) => {
+postRouter.delete("/posts", (req, res) => {
   res.send("Delete a post");
 });
 
