@@ -1,10 +1,31 @@
-import http from "http";
+import express from "express";
 
-http
-  .createServer((req, res) => {
-    console.log("The server is running on http://localhost:4000/");
-    res.writeHead(200, { "Content-Type": "text/html" });
-    res.write("Hello World");
-    res.end();
-  })
-  .listen(4000);
+const app = express();
+
+app.get("/", (req, res) => {
+  res.send("Welcome to my node app!");
+});
+
+app.get("/about", (req, res) => {
+  res.send("Read about my app");
+});
+
+app.get("/products", (req, res) => {
+  res.send("What we offer");
+});
+
+app.get("/address", (req, res) => {
+  res.send("Where to find us");
+});
+
+app.get("/contact", (req, res) => {
+  res.send("How to get in touch");
+});
+
+app.listen(4242, () => {
+  console.log("The server is running on port 4242: http://localhost:4242/");
+});
+
+app.use((req, res, next) => {
+  res.status(404).send("The page was not found");
+});
