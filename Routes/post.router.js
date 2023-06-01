@@ -3,19 +3,19 @@ import express from "express";
 const postRouter = express.Router();
 
 postRouter.get("/posts", (res, req) => {
-  console.log("Get all posts");
+  res.send("Get all posts");
 });
 
 postRouter.post("/posts", (res, req) => {
-  console.log("Make a new post");
+  res.send("Make a new post");
 });
 
 postRouter.put("/posts", (res, req) => {
-  console.log("Update a post");
+  res.send("Update a post");
 });
 
 postRouter.delete("/posts", (res, req) => {
-  console.log("Delete a post");
+  res.send("Delete a post");
 });
 
 export { postRouter };
