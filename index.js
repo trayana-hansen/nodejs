@@ -3,6 +3,18 @@ import { postRouter } from "./Routes/post.router.js";
 import { productRouter } from "./Routes/products.router.js";
 import dotenv from "dotenv";
 
+import db from "./Config/mysql.config.js";
+
+// db.query(`SELECT title FROM song `, (err, result) => {
+//   console.log(result);
+// });
+db.query(
+  `SELECT song.id, song.title, song.content, artist.name FROM song JOIN artist ON song.artist_id = artist.id`,
+  (err, result) => {
+    console.log(result);
+  }
+);
+
 const app = express();
 app.use(express.urlencoded({ extended: true }));
 
