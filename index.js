@@ -9,12 +9,12 @@ import db from "./Config/mysql.config.js";
 // db.query(`SELECT title FROM song `, (err, result) => {
 //   console.log(result);
 // });
-db.query(
-  `SELECT song.id, song.title, song.content, artist.name FROM song JOIN artist ON song.artist_id = artist.id`,
-  (err, result) => {
-    console.log(result);
-  }
-);
+// db.query(
+//   `SELECT song.id, song.title, song.content, artist.name FROM song JOIN artist ON song.artist_id = artist.id`,
+//   (err, result) => {
+//     console.log(result);
+//   }
+// );
 
 const app = express();
 app.use(express.urlencoded({ extended: true }));
@@ -24,8 +24,6 @@ dotenv.config();
 const port = process.env.PORT;
 
 const api_key = process.env.APIKEY;
-
-
 
 app.use(postRouter);
 app.use(productRouter);
