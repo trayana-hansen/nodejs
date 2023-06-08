@@ -6,7 +6,6 @@ class artistController {
   }
 
   list = (request, response) => {
-    // request.query.sortkey;
     let { sortkey, sortdir, limit, attributes } = request.query;
     sortkey = sortkey ? sortkey : "id";
     sortdir = sortdir ? sortdir.toUpperCase() : "ASC";
