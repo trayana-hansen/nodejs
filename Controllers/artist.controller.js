@@ -4,6 +4,7 @@ class artistController {
   constructor() {
     console.log("Artist Controller is fired");
   }
+  
 
   list = (request, response) => {
     let { sortkey, sortdir, limit, attributes } = request.query;
